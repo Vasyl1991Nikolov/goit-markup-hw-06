@@ -15,13 +15,26 @@ h6 {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .container {
-  width: 1158px;
-  padding: 0 15px;
+  max-width: 320px;
+  padding: 0 16px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .header-conteiner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .logo-web {
   font-family: "Raleway", sans-serif;
@@ -32,7 +45,7 @@ h6 {
   text-transform: uppercase;
   color: #4d5ae5;
   text-decoration: none;
-  margin-right: 76px;
+  padding: 17px 0;
 }
 
 .logo-studio {
@@ -53,54 +66,16 @@ h6 {
   align-items: center;
 }
 .link-nav {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
-.link {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  text-decoration: none;
-  padding: 24px 0;
-  display: block;
-}
-.link-studio {
-  position: relative;
-  color: #404bbf;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.link-studio::after {
-  content: "";
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
-}
+
 .link:hover {
   background: #fff;
 }
 .kontakst-text {
-  display: flex;
+  display: none;
 }
-.kontakts {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-  text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.kontakts:hover {
-  background: #fff;
-}
+
 ul,
 ol {
   list-style: none;
@@ -108,28 +83,104 @@ ol {
   margin: 0;
   padding-left: 0;
 }
-.link-nav .link:hover {
-  color: #404bbf;
-}
-
-.link-nav .link:focus {
-  color: #404bbf;
-}
-
-.kontakst-text .kontakts:hover {
-  color: #404bbf;
-}
-
-.kontakst-text .kontakts:focus {
-  color: #404bbf;
-}
 
 .adress-tel-mail {
   font-style: normal;
   margin-left: auto;
 }
-.kontakst-text {
-  gap: 40px;
+
+.open-menu-btn {
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .open-menu-btn {
+    display: none;
+  }
+  .logo-web {
+    margin-right: 120px;
+  }
+  .link-nav {
+    display: flex;
+    gap: 40px;
+  }
+  .link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    text-decoration: none;
+    padding: 24px 0;
+    display: block;
+  }
+  .link-studio {
+    position: relative;
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .link-studio::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+  }
+  .link-nav .link:hover {
+    color: #404bbf;
+  }
+
+  .link-nav .link:focus {
+    color: #404bbf;
+  }
+  .adress-tel-mail {
+    display: block;
+  }
+  .kontakst-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .kontakts {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: #434455;
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .kontakts:hover {
+    background: #fff;
+  }
+  .kontakst-text .kontakts:hover {
+    color: #404bbf;
+  }
+
+  .kontakst-text .kontakts:focus {
+    color: #404bbf;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .logo-web {
+    margin-right: 76px;
+  }
+  .kontakst-text {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .kontakts {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 /* --------------NAVI-------------- */
 
@@ -151,20 +202,20 @@ ol {
   background-color: #2e2f42;
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 1440px;
+
   background-size: cover;
-  padding: 188px 0;
+  padding: 72px 0;
   margin: 0 auto;
 }
 .name-section-one {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  max-width: 496px;
+  max-width: 216px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -193,6 +244,22 @@ ol {
 .button:focus {
   background-color: #404bbf;
 }
+@media screen and (min-width: 768px) {
+  ..effective-solution {
+    padding: 112px 0;
+  }
+  .name-section-one {
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .effective-solution {
+    padding: 188px 0;
+    min-width: 1158px;
+  }
+}
 /* --------------MAIN PART-------------- */
 
 /*--------------- Advantages-------------- */
@@ -200,21 +267,23 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 112px;
+  /* height: 112px; */
   background-color: #f4f4fd;
   border-radius: 4px;
-  border: 1px solid #8e8f99;
+  /* border: 1px solid #8e8f99; */
   margin-bottom: 8px;
 }
 .advantages-list-item {
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
 }
 .section-class {
-  padding: 120px 0;
+  /* padding: 120px 0; */
+  padding: 96px 0;
 }
 .advantages-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .visually-hidden {
@@ -231,21 +300,69 @@ ol {
 }
 .strategy-head {
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  /* font-weight: 500;
+  font-size: 20px; */
+  /* line-height: 1.2; */
+  line-height: 1.1;
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-decoration: none;
   margin-bottom: 8px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
 }
 .strategy-text {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  /* font-weight: 400; */
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+}
+.advantages-list-svg {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .advantages-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+  .advantages-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+  .strategy-head {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .advantages-list-container {
+    height: 112px;
+    border: 1px solid #8e8f99;
+  }
+  .advantages-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .section-class {
+  padding: 120px 0;
+}
+.advantages-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+.strategy-head {
+    font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.strategy-text {
+  font-weight: 400;
+}
+.advantages-list-svg {
+  display: flex;
 }
 /*--------------- Advantages-------------- */
 
@@ -291,18 +408,27 @@ ol {
 .our-team-list {
   display: flex;
   gap: 24px;
+
+
 }
 .our-team-all {
+  display: flex;
+flex-direction: column;
+align-items: center;
+
   background-color: #ffffff;
   text-decoration: none;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+
 }
 .our-team {
-  background: #f4f4fd;
+  /* background: #f4f4fd; */
+  background: #31d0aa;
   padding: 120px 0;
+  
 }
 .our-team-head {
   font-family: "Roboto", sans-serif;
@@ -313,7 +439,6 @@ ol {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
-
   margin-bottom: 72px;
 }
 .our-team-foto {
@@ -328,6 +453,7 @@ ol {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+  text-align: center;
 }
 .our-team-foto-work {
   font-family: "Roboto", sans-serif;
