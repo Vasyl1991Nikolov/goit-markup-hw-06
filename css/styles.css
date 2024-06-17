@@ -251,6 +251,7 @@ ol {
 }
 .link-studio {
   color: #404bbf;
+  text-decoration: none;
 }
 .mob-bottom {
   margin-top: auto;
@@ -266,7 +267,22 @@ ol {
   margin-bottom: 48px;
 }
 .mob-kontakts {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #4d5ae5;
   text-decoration: none;
+}
+.mob-kontakts-tel {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #434455;
 }
 .mob-our-team-network-list {
   display: flex;
@@ -300,6 +316,7 @@ ol {
 .mob-our-team-svg {
   fill: #f4f4fd;
 }
+
 /* ----------------------mod-navi-------------------- */
 
 /* --------------MAIN PART-------------- */
@@ -609,6 +626,8 @@ ol {
 .our-team-foto {
   background-color: #ffffff;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .our-team-foto-name {
   font-family: "Roboto", sans-serif;
@@ -631,7 +650,7 @@ ol {
 }
 @media screen and (min-width: 768px) {
   .our-team .container {
-    padding: 0 108px;
+    width: 584px;
   }
   .our-team-list {
     display: flex;
@@ -701,6 +720,8 @@ ol {
 .portfolio-foto {
   background: url("path_to_image");
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .portfolio-fead {
   font-family: "Roboto", sans-serif;
@@ -830,6 +851,9 @@ ol {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   width: 264px;
+  /* margin-bottom: 72px; */
+}
+.container-logo {
   margin-bottom: 72px;
 }
 .footer-link-container {
@@ -941,7 +965,7 @@ ol {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 108px;
+    width: 584px;
   }
   .container-logo {
     display: flex;
@@ -977,6 +1001,10 @@ ol {
   }
   .container-logo {
     margin-right: 120px;
+    margin-bottom: 0;
+  }
+  .footer-link-list {
+    margin-bottom: 0;
   }
   .form-container-footer {
     margin-left: 80px;
@@ -1142,6 +1170,7 @@ input {
 
 .solutions-checkbox-box {
   margin-bottom: 24px;
+  flex-shrink: 0;
 }
 .visually-hidden {
   position: absolute;
